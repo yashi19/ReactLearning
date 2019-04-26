@@ -33,9 +33,13 @@ class CoursesPage extends React.Component {
         />
 
         <input type="submit" value="Save" />
-        {this.props.courses.map(course => (
-          <div key={course.title}>{course.title}</div>
-        ))}
+        <table className="table table-stripped">
+          {this.props.courses.map(course => (
+            <tr key={course.title}>
+              <td>{course.title}</td>
+            </tr>
+          ))}
+        </table>
       </form>
     );
   }
